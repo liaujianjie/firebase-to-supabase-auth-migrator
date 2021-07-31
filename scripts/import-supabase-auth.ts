@@ -13,6 +13,14 @@ dotenv.config();
  */
 const CHUNK_SIZE = 5000;
 
+// Check for supabase-ca-cert.crt
+if (!fs.existsSync("supabase-ca-cert.crt")) {
+  console.error(
+    'Missing "supabase-ca-cert.crt", download the Postgres SSL CA cert before running this script.'
+  );
+  process.exit(1);
+}
+
 // Check for firebase_auth_export.json
 if (!fs.existsSync("firebase_auth_export.json")) {
   console.error(
@@ -46,7 +54,7 @@ console.info(`${firebaseAuthExport.users.length} Firebase Auth users found in th
   const database = pgp({
     application_name: "firebase_auth_migrator",
     connectionString: process.env.POSTGRES_CONNECTION_STRING,
-    ssl: { ca: fs.readFileSync("prod-ca-2021.crt").toString() },
+    ssl: { ca: fs.readFileSync("supabase-ca-cert.crt").toString() },
   });
 
   // Prepare column set and default values for auth.users table.
