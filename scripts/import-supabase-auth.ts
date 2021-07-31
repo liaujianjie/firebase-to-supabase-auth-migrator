@@ -66,7 +66,7 @@ console.info(`${firebaseAuthExport.users.length} Firebase Auth users found in th
       { name: "role", def: "authenticated" },
       { name: "email" },
       { name: "encrypted_password", def: "" },
-      { name: "confirmed_at", cast: "timestamptz" },
+      { name: "email_confirmed_at", cast: "timestamptz" },
       { name: "confirmation_token", def: "" },
       { name: "recovery_token", def: "" },
       { name: "email_change_token", def: "" },
@@ -93,7 +93,7 @@ console.info(`${firebaseAuthExport.users.length} Firebase Auth users found in th
       const newAuthUserData = {
         id: newUserId,
         email: user.email,
-        confirmed_at: new Date(Number(user.createdAt)),
+        email_confirmed_at: new Date(Number(user.createdAt)),
         created_at: new Date(Number(user.createdAt)),
         updated_at: new Date(Number(user.createdAt)),
         last_sign_in_at: new Date(Number(user.lastSignedInAt)),

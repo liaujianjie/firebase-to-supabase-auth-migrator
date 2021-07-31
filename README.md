@@ -14,6 +14,9 @@ A bunch of simple scripts to help migrate your Firebase Auth users into Supabase
 1. Ready your:
    1. Firebase project ID
    2. Supabase Postgres connection string — you can grab it from `https://app.supabase.io/project/<ref>/settings/database`
+   3. Download Supabase Certificate
+      - copy it to the roof of the project
+      - rename it to `supabase-ca-cert.crt`
 1. `yarn setup`
-1. `yarn export`
-1. `yarn import`
+1. `yarn exportUsers`
+1. `yarn importUsers`
