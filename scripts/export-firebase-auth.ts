@@ -1,7 +1,7 @@
 import cp from "child_process";
 import fs from "fs";
 
-import { isFirebasercObject } from "../typings";
+import { isFirebasercObject } from "../typings/firebaserc-object";
 
 // Check for .firebaserc
 if (!fs.existsSync(".firebaserc")) {
@@ -28,4 +28,4 @@ cp.execSync(`${FIREBASE_BIN} auth:export firebase_auth_export.json`, {
   stdio: "inherit",
 });
 
-console.log("Export from Firebase Auth complete.");
+console.info("Export from Firebase Auth complete.");

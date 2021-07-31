@@ -14,6 +14,6 @@ rl.question("What is your Firebase/Google Cloud project id: ", (projectId) => {
   });
 
   // Close
-  console.info(`Auth migrator set up to extract Firebase Auth accounts from "${projectId}".`);
+  console.info("Firebase source setup done.");
   rl.close();
 });
