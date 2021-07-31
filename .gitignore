@@ -2,7 +2,7 @@ dist
 node_modules
 
 .env.local
-prod-ca-2021.crt
+supabase-ca-cert.crt
 
 .firebaserc
 firebase-debug.log
