@@ -1,0 +1,11 @@
+{
+  "name": "firebase-to-supabase-auth-migrator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Liau Jian Jie",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  }
+}
