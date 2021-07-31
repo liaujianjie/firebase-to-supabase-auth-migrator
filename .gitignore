@@ -3,3 +3,7 @@ node_modules
 
 .env.local
 prod-ca-2021.crt
+
+.firebaserc
+firebase-debug.log
+firebase_auth_export.json
