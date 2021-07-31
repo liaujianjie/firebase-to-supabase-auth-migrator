@@ -3,7 +3,7 @@ import {
   isFirebaseAuthProviderInfo,
 } from "./firebase-auth-provider-info";
 
-type FirebaseAuthUser = {
+export type FirebaseAuthUser = {
   localId: string;
   email?: string;
   emailVerified: boolean;
