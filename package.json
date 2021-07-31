@@ -19,8 +19,8 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "setup": "ts-node scripts/setup-firebase-project.ts",
+    "setup": "ts-node scripts/setup-firebase-project.ts && ts-node scripts/setup-supabase-project.ts",
     "export": "ts-node scripts/export-firebase-auth.ts",
-    "start": "ts-node scripts/import-supabase-auth.ts"
+    "import": "ts-node scripts/import-supabase-auth.ts"
   }
 }
