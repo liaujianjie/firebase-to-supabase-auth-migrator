@@ -4,7 +4,7 @@ const SUPPORTED_AUTH_PROVIDERS_SET = new Set(SUPPORTED_AUTH_PROVIDERS);
 
 type SupportedAuthProviders = typeof SUPPORTED_AUTH_PROVIDERS[number];
 
-type FirebaseAuthProviderInfo = {
+export type FirebaseAuthProviderInfo = {
   providerId: SupportedAuthProviders;
   rawId: string;
   email?: string;
