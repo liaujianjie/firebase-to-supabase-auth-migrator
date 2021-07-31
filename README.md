@@ -20,3 +20,9 @@ A bunch of simple scripts to help migrate your Firebase Auth users into Supabase
 1. `yarn setup`
 1. `yarn exportUsers`
 1. `yarn importUsers`
+
+
+### Permission denied error
+- If you faced an error with permission denied, please do the below
+   - execute this in Supabase sql query `alter user postgres with superuser;`
+   - after your migration done, please revert the change above with `alter user postgres with nosuperuser;`
