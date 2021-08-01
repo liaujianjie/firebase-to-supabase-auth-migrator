@@ -2,7 +2,7 @@
 
 A bunch of simple scripts to help migrate your Firebase Auth users into Supabase Auth.
 
-This script is pulled out from https://supabase.io/blog/2021/07/28/mobbin-supabase-200000-users.
+These scripts were pulled out from the migration scripts that was used to [migrate ~200k users for Mobbin](https://supabase.io/blog/2021/07/28/mobbin-supabase-200000-users).
 
 ## Notes
 
