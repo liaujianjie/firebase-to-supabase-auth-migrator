@@ -2,7 +2,12 @@
 
 A bunch of simple scripts to help migrate your Firebase Auth users into Supabase Auth.
 
-Note: This script does **NOT** migrate users from Firebase Auth who are using password sign-ins.
+This script is pulled out from https://supabase.io/blog/2021/07/28/mobbin-supabase-200000-users.
+
+## Notes
+
+- The scripts do **NOT** migrate users from Firebase Auth who are using password sign-ins.
+- The scripts requires that your Firebase Auth users **must have an email**. It is possible for Firebase Auth to not retrieve email during sign-ins if you did not specify sufficient [scopes](https://firebase.google.com/docs/auth/web/google-signin) (e.g. the `email` scope for Facebook).
 
 ## Installation
 
