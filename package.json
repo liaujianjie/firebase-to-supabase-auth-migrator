@@ -20,7 +20,7 @@
   },
   "scripts": {
     "setup": "ts-node scripts/setup-firebase-project.ts && ts-node scripts/setup-supabase-project.ts",
-    "export": "ts-node scripts/export-firebase-auth.ts",
-    "import": "ts-node scripts/import-supabase-auth.ts"
+    "export-users": "ts-node scripts/export-firebase-auth.ts",
+    "import-users": "ts-node scripts/import-supabase-auth.ts"
   }
 }
