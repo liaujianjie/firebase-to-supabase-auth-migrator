@@ -2,6 +2,8 @@
 
 A bunch of simple scripts to help migrate your Firebase Auth users into Supabase Auth.
 
+Note: This script does **NOT** migrate users from Firebase Auth who are using password sign-ins.
+
 ## Installation
 
 ### Install dependencies
