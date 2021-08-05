@@ -6,7 +6,7 @@ These scripts were pulled out from the migration scripts that was used to [migra
 
 ## Notes
 
-- The scripts do **NOT** migrate users from Firebase Auth who are using password sign-ins.
+- The scripts do **NOT** migrate users from Firebase Auth who are using password sign-ins. If you wish to migrate users that are using password sign-ins, check out [this Discord thread](https://discord.com/channels/839993398554656828/871327728698269737/871386701640130620) for a possible solution.
 - The scripts requires that your Firebase Auth users **must have an email**. It is possible for Firebase Auth to not retrieve email during sign-ins if you did not specify sufficient [scopes](https://firebase.google.com/docs/auth/web/google-signin) (e.g. the `email` scope for Facebook).
 
 ## Installation
