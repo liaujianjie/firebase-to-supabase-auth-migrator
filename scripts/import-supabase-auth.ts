@@ -34,7 +34,7 @@ const firebaseAuthExportString = fs.readFileSync("firebase_auth_export.json", "u
 let firebaseAuthExport: FirebaseAuthExport;
 try {
   const firebaseAuthExportObject = JSON.parse(firebaseAuthExportString);
-  if (!isFirebaseAuthExport(firebaseAuthExportString)) {
+  if (!isFirebaseAuthExport(firebaseAuthExportObject)) {
     throw new Error("Failed type guards.");
   }
 
@@ -43,6 +43,7 @@ try {
   console.error(
     'Invalid "firebase_auth_export.json", run "yarn export" before running this script.'
   );
+  console.error(error)
   process.exit(1);
 }
 console.info(`${firebaseAuthExport.users.length} Firebase Auth users found in the export.`);
@@ -97,8 +98,8 @@ console.info(`${firebaseAuthExport.users.length} Firebase Auth users found in th
         created_at: new Date(Number(user.createdAt)),
         updated_at: new Date(Number(user.createdAt)),
         last_sign_in_at: new Date(Number(user.lastSignedInAt)),
-        raw_app_meta_data: { provider: provider.providerId.replace(".com", "") },
-        raw_user_meta_data: { full_name: user.displayName, avatar_url: provider.photoUrl },
+        raw_app_meta_data: provider ? { provider: provider.providerId.replace(".com", "") } : {},
+        raw_user_meta_data: { full_name: user.displayName, avatar_url: provider ? provider.photoUrl : '' },
       };
 
       return { newAuthUserData };
