@@ -1,3 +1,5 @@
+**⚠️ This repository is not actively maintained. Please refer to the [official guides on migrating to Supabase](https://supabase.com/docs/guides/platform/migrating-to-supabase) moving forward.**
+
 # firebase-to-supabase-auth-migrator
 
 A bunch of simple scripts to help migrate your Firebase Auth users into Supabase Auth.
